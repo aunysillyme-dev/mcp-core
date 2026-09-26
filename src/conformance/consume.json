@@ -1,0 +1,139 @@
+[
+  {
+    "name": "first use, reuse, expired-before-purge, boundary: sha256-b64url-43",
+    "codeIdScheme": "sha256-b64url-43",
+    "steps": [
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": true,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 20,
+        "expected": false,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 101,
+        "expected": false,
+        "sqlCalls": 0
+      },
+      {
+        "codeId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "expiresAt": 200,
+        "now": 101,
+        "expected": true,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "expiresAt": 200,
+        "now": 200,
+        "expected": false,
+        "sqlCalls": 3
+      }
+    ]
+  },
+  {
+    "name": "malformed id: sha256-b64url-43",
+    "codeIdScheme": "sha256-b64url-43",
+    "steps": [
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": null,
+        "error": "invalid codeId",
+        "sqlCalls": 0
+      }
+    ]
+  },
+  {
+    "name": "first use, reuse, expired-before-purge, boundary: sha256-b64url-32",
+    "codeIdScheme": "sha256-b64url-32",
+    "steps": [
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": true,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 20,
+        "expected": false,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 101,
+        "expected": false,
+        "sqlCalls": 0
+      },
+      {
+        "codeId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "expiresAt": 200,
+        "now": 101,
+        "expected": true,
+        "sqlCalls": 3
+      },
+      {
+        "codeId": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "expiresAt": 200,
+        "now": 200,
+        "expected": false,
+        "sqlCalls": 3
+      }
+    ]
+  },
+  {
+    "name": "malformed id: sha256-b64url-32",
+    "codeIdScheme": "sha256-b64url-32",
+    "steps": [
+      {
+        "codeId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": null,
+        "error": "invalid codeId",
+        "sqlCalls": 0
+      }
+    ]
+  },
+  {
+    "name": "TS malformed alphabet",
+    "codeIdScheme": "sha256-b64url-43",
+    "steps": [
+      {
+        "codeId": "///////////////////////////////////////////",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": null,
+        "error": "invalid codeId",
+        "sqlCalls": 0
+      }
+    ]
+  },
+  {
+    "name": "Python preserves length-only validation",
+    "codeIdScheme": "sha256-b64url-32",
+    "steps": [
+      {
+        "codeId": "////////////////////////////////",
+        "expiresAt": 100,
+        "now": 10,
+        "expected": true,
+        "sqlCalls": 3
+      }
+    ]
+  }
+]

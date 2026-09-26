@@ -1,0 +1,23 @@
+# @auny/mcp-core
+
+> Dependency-free TypeScript primitives for MCP servers on Cloudflare Workers: a single-use code ledger for OAuth authorization codes, a bounded fetch that never retries mutations, tool-result byte budgets with cursors, and tool annotation presets.
+
+Install: `npm install 'git+https://github.com/auny-ai/mcp-core.git#v0.1.0'`
+
+## Docs
+
+- [README](https://github.com/auny-ai/mcp-core/blob/main/README.md): what each module does, install, and what stays per server
+- [AGENTS.md](https://github.com/auny-ai/mcp-core/blob/main/AGENTS.md): build, test and change rules for coding agents
+
+## Reference
+
+- [ledger source](https://github.com/auny-ai/mcp-core/blob/main/src/ledger.ts): synchronous single-use claim, code IDs, ledger identity
+- [http source](https://github.com/auny-ai/mcp-core/blob/main/src/http.ts): fetchBounded deadlines, byte limits, safe-only retries, redaction
+- [results source](https://github.com/auny-ai/mcp-core/blob/main/src/results.ts): budgeted tool results, cursors, withinBudget
+- [annotations source](https://github.com/auny-ai/mcp-core/blob/main/src/annotations.ts): presets and registerTool helper
+- [conformance fixtures](https://github.com/auny-ai/mcp-core/tree/main/src/conformance): JSON cases shared across languages
+
+## Optional
+
+- [CHANGELOG](https://github.com/auny-ai/mcp-core/blob/main/CHANGELOG.md): release history
+- [SECURITY](https://github.com/auny-ai/mcp-core/blob/main/SECURITY.md): private vulnerability reporting

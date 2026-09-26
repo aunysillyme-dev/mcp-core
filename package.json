@@ -1,0 +1,74 @@
+{
+  "name": "@auny/mcp-core",
+  "version": "0.1.0",
+  "description": "Dependency-free primitives for MCP servers on Cloudflare Workers: single-use code ledger, bounded fetch, tool result budgets, tool annotations.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cloudflare-workers",
+    "durable-objects",
+    "oauth",
+    "single-use",
+    "mcp-server",
+    "typescript",
+    "sqlite",
+    "tool-annotations"
+  ],
+  "homepage": "https://github.com/auny-ai/mcp-core#readme",
+  "bugs": {
+    "url": "https://github.com/auny-ai/mcp-core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auny-ai/mcp-core.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./ledger": {
+      "workerd": {
+        "types": "./dist/ledger-worker.d.ts",
+        "default": "./dist/ledger-worker.js"
+      },
+      "types": "./dist/ledger.d.ts",
+      "default": "./dist/ledger.js"
+    },
+    "./http": {
+      "types": "./dist/http.d.ts",
+      "default": "./dist/http.js"
+    },
+    "./results": {
+      "types": "./dist/results.d.ts",
+      "default": "./dist/results.js"
+    },
+    "./annotations": {
+      "types": "./dist/annotations.d.ts",
+      "default": "./dist/annotations.js"
+    },
+    "./conformance": {
+      "types": "./dist/conformance.d.ts",
+      "default": "./dist/conformance.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/conformance/*.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.worker.json",
+    "prepare": "npm run build",
+    "test": "node scripts/test.mjs",
+    "conformance": "npm run build && node scripts/conformance.mjs"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20260702.1",
+    "typescript": "6.0.3"
+  }
+}

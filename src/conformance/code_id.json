@@ -1,0 +1,32 @@
+[
+  {
+    "codeIdScheme": "sha256-b64url-43",
+    "input": "abc",
+    "expected": "ungWv48Bz-pBQUDeXa4iI7ADYaOWF3qctBD_YfIAFa0"
+  },
+  {
+    "codeIdScheme": "sha256-b64url-43",
+    "input": "",
+    "expected": "47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"
+  },
+  {
+    "codeIdScheme": "sha256-b64url-43",
+    "input": "fixture-code-☃",
+    "expected": "urZmb6_ExWAMNg32e-u1ulzJx-w5_dzeHcXOAP4HPXg"
+  },
+  {
+    "codeIdScheme": "sha256-b64url-32",
+    "input": "abc",
+    "expected": "ungWv48Bz-pBQUDeXa4iI7ADYaOWF3qc"
+  },
+  {
+    "codeIdScheme": "sha256-b64url-32",
+    "input": "",
+    "expected": "47DEQpj8HBSa-_TImW-5JCeuQeRkm5NM"
+  },
+  {
+    "codeIdScheme": "sha256-b64url-32",
+    "input": "fixture-code-☃",
+    "expected": "urZmb6_ExWAMNg32e-u1ulzJx-w5_dze"
+  }
+]
