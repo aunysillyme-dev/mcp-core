@@ -14,4 +14,4 @@ All notable changes to this project are documented here. The format follows
 - `./annotations`: behavior presets and a `registerTool` helper that refuses unannotated tools.
 - `./conformance`: language-neutral JSON fixtures for the ledger algorithm and a TypeScript runner.
 
-[0.1.0]: https://github.com/auny-ai/mcp-core/releases/tag/v0.1.0
+[0.1.0]: https://github.com/aunysillyme-dev/mcp-core/releases/tag/v0.1.0
