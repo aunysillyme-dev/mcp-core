@@ -3,7 +3,7 @@
 ## Reporting a vulnerability
 
 Report vulnerabilities privately through GitHub's
-[private vulnerability reporting](https://github.com/auny-ai/mcp-core/security/advisories/new).
+[private vulnerability reporting](https://github.com/aunysillyme-dev/mcp-core/security/advisories/new).
 Please include the affected module, a reproduction and the version or commit.
 
 You will get an acknowledgement within 7 days. Fixes ship as a new tagged

@@ -14,13 +14,13 @@
     "sqlite",
     "tool-annotations"
   ],
-  "homepage": "https://github.com/auny-ai/mcp-core#readme",
+  "homepage": "https://github.com/aunysillyme-dev/mcp-core#readme",
   "bugs": {
-    "url": "https://github.com/auny-ai/mcp-core/issues"
+    "url": "https://github.com/aunysillyme-dev/mcp-core/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/auny-ai/mcp-core.git"
+    "url": "git+https://github.com/aunysillyme-dev/mcp-core.git"
   },
   "license": "MIT",
   "type": "module",

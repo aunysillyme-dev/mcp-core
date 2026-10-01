@@ -8,7 +8,7 @@ dependencies.
 ## Install
 
 ```sh
-npm install 'git+https://github.com/auny-ai/mcp-core.git#v0.1.0'
+npm install 'git+https://github.com/aunysillyme-dev/mcp-core.git#v0.1.0'
 ```
 
 Git installs run `prepare` to build JavaScript and declarations from source.
